@@ -15,7 +15,8 @@ function startCountdown(mins) {
   countdownInterval = setInterval(() => {
     const secondsLeft = Math.round((then - Date.now()) / 1000);
     if (secondsLeft < 0) {
-      clearInterval(countdownInterval);
+      countdownCounter.innerHTML = "Your break has finished!";
+      return clearInterval(countdownInterval);
     }
 
     displayTimer(secondsLeft);
@@ -28,7 +29,9 @@ function displayTimer(secondsLeft) {
   let mins = Math.floor(secondsLeft / 60);
   let secs = secondsLeft % 60;
 
-  countdownCounter.innerHTML = `${mins}m:${secs < 10 ? "0" : ""}${secs}s`;
+  countdownCounter.innerHTML = `${mins > 1 ? `${mins}m:` : ""}${
+    secs < 10 && mins > 1 ? "0" : ""
+  }${secs}s`;
 }
 
 function displayRemainder(then) {

@@ -3,7 +3,7 @@ const secondsHand = document.querySelector(".second-hand");
 const minutesHand = document.querySelector(".min-hand");
 const hoursHand = document.querySelector(".hour-hand");
 
-const outClock = document.querySelector(".out-clock");
+const outClock = document.querySelector(".clock-counter");
 
 function setDate() {
   const now = new Date();

@@ -8,26 +8,30 @@
     <title>Clock / Stopwatch</title>
   </head>
   <body>
-    <!-- Clock -->
-    <div class="clock">
-      <div class="clock-face">
-        <div class="hand hour-hand"></div>
-        <div class="hand min-hand"></div>
-        <div class="hand second-hand"></div>
-      </div>
-    </div>
-    <div>
-      <h1 class="out-clock">12:00:00 p.m.</h1>
-    </div>
     <!-- Stopwatch -->
-    <div class="stopwatch">
+    <div id="stopwatch">
+      <h1>Stopwatch</h1>
       <button class="stopwatch-action stopwatch-start">start</button>
       <button class="stopwatch-action stopwatch-reset">reset</button>
       <div class="stopwatch-counter">0h:00m:00s</div>
     </div>
-    <!-- Countdown -->
 
-    <div class="countdown">
+    <!-- Clock -->
+    <div id="clock">
+      <h1>Clock</h1>
+      <div class="clock">
+        <div class="clock-face">
+          <div class="hand hour-hand"></div>
+          <div class="hand min-hand"></div>
+          <div class="hand second-hand"></div>
+        </div>
+      </div>
+      <div class="clock-counter">12:00:00 p.m.</div>
+    </div>
+
+    <!-- Countdown -->
+    <div id="countdown">
+      <h1>Countdown</h1>
       <button class="countdown-action countdown-5min">5 min</button>
       <button class="countdown-action countdown-15min">15 min</button>
       <div class="countdown-counter">00m:00s</div>
