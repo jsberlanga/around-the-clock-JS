@@ -1,0 +1,82 @@
+html {
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(89, 196, 233, 1) 0%,
+    rgba(193, 181, 232, 1) 90%
+  );
+  background-size: cover;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.out-clock {
+  text-align: center;
+  margin: 0 auto;
+  color: #c05c7e;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.clock {
+  width: 12rem;
+  height: 12rem;
+  border: 4px solid #c05c7e;
+  border-radius: 50%;
+  margin: 5rem auto 2rem;
+  position: relative;
+  padding: 2rem;
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.hand {
+  width: 50%;
+  height: 4px;
+  background: #c05c7e;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.stopwatch,
+.countdown {
+  margin-top: 5rem;
+}
+
+.stopwatch-counter,
+.countdown-counter,
+.countdown-remainder {
+  font-size: 3rem;
+  color: #c05c7e;
+  margin: 1rem;
+}
+
+.stopwatch .stopwatch-action,
+.countdown-action {
+  padding: 0.9rem 1.8rem;
+  border: none;
+  background: #c05c7e;
+  color: #fafafa;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin: 1rem;
+}
